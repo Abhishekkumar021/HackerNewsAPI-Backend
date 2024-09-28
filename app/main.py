@@ -9,7 +9,6 @@ import os
 
 load_dotenv()
 
-
 setup_logging()
 app = FastAPI()
 
@@ -24,7 +23,7 @@ app.add_middleware(
 def home():
     return {"Hello": "World"}
 
-app.include_router(router)
+app.include_router(router, prefix='/api/v1/news')
 
 if __name__ == "__main__":
     import uvicorn
