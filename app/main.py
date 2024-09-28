@@ -9,7 +9,6 @@ import os
 
 load_dotenv()
 
-
 setup_logging()
 app = FastAPI()
 
